@@ -3,22 +3,55 @@
     --mainbackgroundcolour: #251D3A;
     --secondarybackgroundcolour: #2A2550;
     --bordercolour: #FF7700;
+    --buttoncolour: #FFB97C;
     --textcolour: #fff;
 }
 
 body {
+    width: 100%;
+    max-width: fit-content;
     background-color: var(--mainbackgroundcolour);
     color: var(--textcolour);
     border-color: var(--bordercolour);
 }
 
 header {
-    color: var(--textcolour);
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 400%;
-    margin-left: 10%;
-    padding: 1%;
+    margin-left: 5%;
+    
+}
+
+.app-title {
+    font-size: 5rem;
+    position: relative;
+}
+
+#icon-img {
+    float: right;
+    margin-top: -9.5%;
+}
+.input {
+    float:inherit;
+    width: 22rem;
+    margin-bottom: 1.5rem;
+}
+
+.has-text-centered {
+    display: flex;
+}
+
+.button {
+    width: 22rem;
+}
+
+.is-child {
+    background-color: var(--secondarybackgroundcolour);
+}
+
+.title,
+.subtitle,
+.content {
+    color: var(--textcolour);
 }

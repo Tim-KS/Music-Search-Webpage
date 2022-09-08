@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
-
     <!-- Bulma Code -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Google Font
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     -->
     
     <title>Music Brain</title>
 
@@ -23,22 +23,28 @@
 <body>
     <header class="hero is-medium">
         <div class="hero-body">
-            <h1 class="title">
+            <h1 class="app-title" style="color: #ffffff">
                 MUSIC BRAIN
             </h1>
-            <p class="subtitle">
-                Medium subtitle
-            </p>
+        </br>
+
+            <image id="icon-img" src="./assets/images/brain.png" alt="cartoon icon of a brain. The left side is solid orange with purple notes. The right side is transperant with geomtric lines joined by neurons."></image>
+        
+        </br>    
+            
+            <input class="input is-rounded" type="text" placeholder="Justin Bieber">
+
+        </br>
+
+            <div class="has-text-centered">
+                <button class="button is-success is-rounded" style="background-color: #FFB97C">Search</button>
+            </div>
         </div>
     </header>
+
     <div class="tile is-ancestor">
         <div class="tile is-3 is-parent">
             <article class="tile is-child box">
-                <p class="title">Music Brain</p>
-                <input class="input is-rounded" type="text" placeholder="Rounded input">
-                <div class="has-text-centered">
-                    <button class="button is-success">Submit</button>
-                </div>
                 <p class="subtitle">Artist name</p>
                 <figure class="image is-4by3">
                     <img src="https://bulma.io/images/placeholders/640x480.png">
@@ -113,5 +119,4 @@
         </div>
     </div>
 </body>
-
 </html>
