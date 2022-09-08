@@ -1,0 +1,24 @@
+/* Application theme colours */
+:root {
+    --mainbackgroundcolour: #251D3A;
+    --secondarybackgroundcolour: #2A2550;
+    --bordercolour: #FF7700;
+    --textcolour: #fff;
+}
+
+body {
+    background-color: var(--mainbackgroundcolour);
+    color: var(--textcolour);
+    border-color: var(--bordercolour);
+}
+
+header {
+    color: var(--textcolour);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 400%;
+    margin-left: 10%;
+    padding: 1%;
+}
