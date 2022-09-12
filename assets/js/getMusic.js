@@ -53,4 +53,6 @@ function getSearch(searchResult) {
             $modal.classList.remove("is-active");
           });
         });
+
+$(modal-content-width).value("320px");
       
