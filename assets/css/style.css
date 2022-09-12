@@ -56,10 +56,6 @@ header {
     background-color: var(--mainbackgroundcolour);
 }
 
-#footer-title{
-    color: var(--bordercolour);
-}
-
 .title,
 .subtitle,
 .content,
