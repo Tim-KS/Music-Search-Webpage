@@ -1,6 +1,9 @@
 var userFormEl = document.querySelector('#user-form');
 var nameInputEl = document.querySelector('#userinput');
 var wikiurl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search='
+var wikipage = 'https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=revisions&titles=Pet_door&formatversion=2&rvprop=content&rvslots=*'
+var wikiHead = 'https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=revisions&titles='
+var wikiTail = '&formatversion=2&rvprop=content&rvslots=*'
 var formSubmitHandler = function (event) {
     event.preventDefault();
     console.log('inside the form submit handler');
@@ -15,37 +18,19 @@ var formSubmitHandler = function (event) {
 
 var getWiki = function (artist) {
     var apiURL = wikiurl + artist;
-    console.log(apiURL);
-    fetch(apiURL)
+    var apiPage = wikiHead + artist + wikiTail
+    //console.log(apiURL);
+    console.log(apiPage)
+    fetch(apiPage)
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
-                    console.log(data);
+                    console.log(data.query.pages[0].title);
+                    console.log(data.query.pages[0].revisions[0].slots.main.content);
+                    console.log('The data shown is above')
                 })
             }
         })
 }
 
-
-var getWikiAPI = function (user) {
-    var apiUrl = 'https://api.github.com/users/' + user + '/repos';
-    //  https://www.mediawiki.org/w/api.php?action=query&format=json&prop=info&generator=search&gsrsearch=meaning
-    //  https://www.mediawiki.org/w/api.php?action=opensearch&format=json&search=Te
-
-    fetch(apiUrl)
-        .then(function (response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    console.log(data)
-                });
-            } else {
-                alert('Error: ' + response.statusText);
-            }
-        })
-        .catch(function (error) {
-            alert('Unable to connect to GitHub');
-        });
-};
 userFormEl.addEventListener('submit', formSubmitHandler);
-
-
