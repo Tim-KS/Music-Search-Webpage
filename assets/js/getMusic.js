@@ -11,15 +11,16 @@ submitBtn.addEventListener('click', function (event) {
 })
 
 function getSearch(searchResult) {
-    fetch(searchResult)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log('YouTube Video Result: \n----------');
-            console.log(data.items[0].id.videoId);
-            var videoId = data.items[0].id.videoId;
-            console.log('Video ID is: ' + videoId);
-        })
-        
-}
+    fetch(searchResult).then(function (response) {
+        if (response.ok) {           
+            response.json().then(function (data) {
+                console.log('YouTube Video Result: \n----------');
+                console.log(data.items[0].id.videoId);
+                var videoId = data.items[0].id.videoId;
+                console.log('Video ID is: ' + videoId);
+            })
+            } else {
+                alert('Error: ' + response.statusText);
+            }
+        })   
+    }
