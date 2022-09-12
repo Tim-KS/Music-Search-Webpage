@@ -8,6 +8,7 @@
 }
 
 body {
+    height: 100%;
     width: 100%;
     max-width: fit-content;
     background-color: var(--mainbackgroundcolour);
@@ -22,6 +23,8 @@ header {
     margin-left: 5%;
     
 }
+
+
 
 .app-title {
     font-size: 5rem;
@@ -49,9 +52,18 @@ header {
     background-color: var(--secondarybackgroundcolour);
 }
 
+.footer {
+    background-color: var(--mainbackgroundcolour);
+}
+
+#footer-title{
+    color: var(--bordercolour);
+}
+
 .title,
 .subtitle,
-.content {
+.content,
+.footer {
     color: var(--textcolour);
 }
   
