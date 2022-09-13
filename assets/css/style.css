@@ -48,6 +48,13 @@ header {
     width: 22rem;
 }
 
+.tile .is-ancestor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20rem;
+}
+
 .is-child {
     background-color: var(--secondarybackgroundcolour);
 }
