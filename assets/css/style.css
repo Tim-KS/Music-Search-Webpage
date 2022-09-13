@@ -21,7 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-left: 5%;
-    
+
 }
 
 
@@ -35,6 +35,7 @@ header {
     float: right;
     margin-top: -9.5%;
 }
+
 .input {
     width: 22rem;
     margin-bottom: 1.5rem;
@@ -52,8 +53,23 @@ header {
     background-color: var(--secondarybackgroundcolour);
 }
 
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enable-line-break {
+    white-space: pre-wrap;
+}
+
 .footer {
     background-color: var(--mainbackgroundcolour);
+}
+
+.footer-text {
+    justify-items: center;
 }
 
 .title,
@@ -66,13 +82,13 @@ header {
 .modal-card {
     text-align: center;
 }
-  
-  @media screen and (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
     .app-title {
         text-align: center;
         margin-bottom: -3%;
     }
-        
+
     #icon-img {
         float: none;
         margin: 0 25% 0 31%;
@@ -82,17 +98,17 @@ header {
         margin: 0 25% 2% 25%;
     }
 
-    .has-text-centered{
+    .has-text-centered {
         margin: 0 25% 2% 25%;
         width: 23rem;
     }
 
-  }
-  
-  
-  @media screen and (max-width: 567px) {
+}
 
-    .app-title{
+
+@media screen and (max-width: 567px) {
+
+    .app-title {
         text-align: center;
         margin-bottom: -3%;
     }
@@ -110,6 +126,6 @@ header {
         margin: 0 25% 2% 25%;
         width: 23rem;
     } */
-  
-  
-  }
+
+
+}

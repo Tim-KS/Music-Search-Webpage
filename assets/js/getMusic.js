@@ -54,5 +54,5 @@ function getSearch(searchResult) {
           });
         });
 
-$(modal-content-width).value("320px");
+// $(modal-content-width).value("320px");
       
