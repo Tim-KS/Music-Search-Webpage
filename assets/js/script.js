@@ -10,9 +10,10 @@ var formSubmitHandler = function (event) {
     var searchItem = nameInputEl.value.trim();
     if (searchItem) {
         console.log(searchItem);
-        searchItem = searchItem.split(' ').join('_')
+        // searchItem = searchItem.split(' ').join('_')
         console.log('new SearchItem is: ' + searchItem);
-        getWiki(searchItem);
+        //getWiki(searchItem);
+        tryWiki(searchItem);
     } else {
         alert('nice try buddy');
     }
@@ -43,5 +44,48 @@ var getWiki = function (artist) {
             }
         })
 }
+
+var tryWiki = function (artist) {
+
+    var url = "https://en.wikipedia.org/w/api.php?" +
+        new URLSearchParams({
+            origin: "*",
+            action: "parse",
+            page: artist,
+            format: "json",
+        });
+
+    try {
+        fetch(url)
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (data) {
+                        var json = data
+                        console.log(json);
+                        var element = document.querySelector("wikipedia");
+                        element.append(json.parse.text["*"])
+                        console.log(element);
+                        console.log(json.parse.text["*"]);
+
+
+                    })
+                }
+            }
+            )
+
+        /*    
+          var req = fetch(url);
+          console.log(req);
+          var json = req.json();
+          console.log(json);
+          console.log(json.parse.text["*"]);
+  
+          */
+    } catch (e) {
+        console.error(e);
+    }
+
+}
+
 
 userFormEl.addEventListener('submit', formSubmitHandler);
