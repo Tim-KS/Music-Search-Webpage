@@ -21,21 +21,24 @@
             <h1 class="app-title" style="color: #ffffff">
                 MUSIC BRAIN
             </h1>
-        </br>
+            </br>
 
-            <image id="icon-img" src="./assets/images/brain.png" alt="cartoon icon of a brain. The left side is solid orange with purple notes. The right side is transperant with geomtric lines joined by neurons."></image>
-        
-        </br>    
-            <form id="user-form" class="card-body"> 
-            <input name="user-form" class="input is-rounded" id="artistSearch" type="text" placeholder="Justin Bieber">
-        </br>
+            <image id="icon-img" src="./assets/images/brain.png"
+                alt="cartoon icon of a brain. The left side is solid orange with purple notes. The right side is transperant with geomtric lines joined by neurons.">
+            </image>
+
+            </br>
+            <form id="user-form" class="card-body">
+                <input name="user-form" class="input is-rounded" id="artistSearch" type="text"
+                    placeholder="Justin Bieber">
+                </br>
 
             <div class="has-text-centered">
                 <button type="click" class="button is-success is-rounded js-modal-trigger" id="submitBtn" data-target="modal-js-error" style="background-color: #FFB97C">Search</button>
             </div>
         </form>
         </div>
-    
+
     </header>
 
     <div class="tile is-ancestor">
@@ -61,9 +64,26 @@
 
         <div class="tile is-parent is-3">
             <article class="tile is-child box">
-                <p class="title">SOME SONGS</p>
-                <div class="content">
-                    <p></p>
+                <p class="title">Top 5 Songs</p>
+                <div class="content" id="youtubeContainer">
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <!-- <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe> -->
                 </div>
             </article>
         </div>
@@ -109,4 +129,5 @@
     
     <script src="./assets/js/getMusic.js"></script>
 </body>
+
 </html>
