@@ -8,6 +8,8 @@ submitBtn.addEventListener('click', function (event) {
     artist = artist.replace(/\s+/g, '');
     searchResult = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=' + artist + '&type=video&key=AIzaSyDofZ01q_Qh-baUnjYC0t5fzULoMJw_qNE';
     getSearch(searchResult);
+
+    localStorage.setItem('You have searched: ', artist);
 })
 
 function getSearch(searchResult) {
