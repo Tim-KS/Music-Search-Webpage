@@ -10,6 +10,8 @@ var formSubmitHandler = function (event) {
     var searchItem = nameInputEl.value.trim();
     if (searchItem) {
         console.log(searchItem);
+        searchItem = searchItem.split(' ').join('_')
+        console.log('new SearchItem is: ' + searchItem);
         getWiki(searchItem);
     } else {
         alert('nice try buddy');
@@ -25,7 +27,16 @@ var getWiki = function (artist) {
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
+                    var name = data.query.pages[0].title
                     console.log(data.query.pages[0].title);
+                    console.log(data.query.pages[0]);
+                    if (name) {
+                        document.getElementById("artist-name").textContent = name
+                    }
+                    var bio = data.query.pages[0].revisions[0].slots.main.content
+                    if (bio) {
+                        document.getElementById("bio").innerHTML = marked.parse(bio);
+                    }
                     console.log(data.query.pages[0].revisions[0].slots.main.content);
                     console.log('The data shown is above')
                 })
