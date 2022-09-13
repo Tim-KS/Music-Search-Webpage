@@ -20,7 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-left: 5%;
-    
+
 }
 
 .app-title {
@@ -32,6 +32,7 @@ header {
     float: right;
     margin-top: -9.5%;
 }
+
 .input {
     width: 22rem;
     margin-bottom: 1.5rem;
@@ -54,13 +55,19 @@ header {
 .content {
     color: var(--textcolour);
 }
-  
-  @media screen and (max-width: 768px) {
+
+.youtubeVideo {
+    width: 100%;
+    height: 100%;
+    margin: 15px 0;
+}
+
+@media screen and (max-width: 768px) {
     .app-title {
         text-align: center;
         margin-bottom: -3%;
     }
-        
+
     #icon-img {
         float: none;
         margin: 0 25% 0 31%;
@@ -70,17 +77,17 @@ header {
         margin: 0 25% 2% 25%;
     }
 
-    .has-text-centered{
+    .has-text-centered {
         margin: 0 25% 2% 25%;
         width: 23rem;
     }
 
-  }
-  
-  
-  @media screen and (max-width: 567px) {
+}
 
-    .app-title{
+
+@media screen and (max-width: 567px) {
+
+    .app-title {
         text-align: center;
         margin-bottom: -3%;
     }
@@ -98,6 +105,6 @@ header {
         margin: 0 25% 2% 25%;
         width: 23rem;
     } */
-  
-  
-  }
+
+
+}
