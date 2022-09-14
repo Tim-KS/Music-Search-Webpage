@@ -15,13 +15,16 @@ submitBtn.addEventListener('click', function (event) {
 
 function getArtist(searchResult) {
     fetch(searchResult).then(function (response) {
-        if (response.ok) {           
+        if (!response.ok) { 
+            errorModal()
+        } else {      
             return response.json()
-            } else {
-                errorModal();
-            }
-        })
+        }
+    })
     .then(function(data) {
+        if (data.length === 0) {
+            errorModal()
+        } else {
         var channelId = data.items[0].id.channelId;
         fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyDofZ01q_Qh-baUnjYC0t5fzULoMJw_qNE&channelId=' + channelId + '&part=snippet,id&type=video&chart=mostPopular&categoryId=10&maxResults=5')
         .then(function (response) {
@@ -37,7 +40,7 @@ function getArtist(searchResult) {
                 console.log('This is the index ' + i +' most popular video: ' + data.items[i].id.videoId);
                 embedLink = 'https://www.youtube.com/embed/';
             }
-        })
+        })}
     })
 }
 
