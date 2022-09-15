@@ -7,104 +7,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <title>Music Brain</title>
 </head>
 
 <body>
+    <header class="hero is-medium">
+        <div class="hero-body">
+            <h1 class="app-title" style="color: #ffffff">
+                MUSIC BRAIN
+            </h1>
+            </br>
+
+            <image id="icon-img" src="./assets/images/brain.png"
+                alt="cartoon icon of a brain. The left side is solid orange with purple notes. The right side is transperant with geomtric lines joined by neurons.">
+            </image>
+
+            </br>
+            <form id="user-form" class="card-body">
+                <input name="user-form" class="input is-rounded" id="artistSearch" type="text"
+                    placeholder="Justin Bieber">
+                </br>
+
+                <div class="has-text-centered">
+                    <button type="click" class="button is-success is-rounded js-modal-trigger" id="submitBtn"
+                        data-target="modal-js-error" style="background-color: #FFB97C">Search</button>
+                </div>
+            </form>
+        </div>
+
+    </header>
+
     <div class="tile is-ancestor">
-        <div class="tile is-3 is-parent">
+        <div class="tile is-4 is-parent">
             <article class="tile is-child box">
-                <p class="title">Music Brain</p>
-                <form id="user-form" class="card-body">
-                    <input name="userinput" class="input is-rounded" id="userinput" type="text"
-                        placeholder="Rounded input">
-                    <div class="has-text-centered">
-                        <button type="submit" class="button is-success">Submit</button>
-                    </div>
-                </form>
-                <p class="subtitle">Artist name</p>
                 <figure class="image is-4by3">
                     <img src="https://bulma.io/images/placeholders/640x480.png">
                 </figure>
             </article>
         </div>
 
-        <div class="tile is-3 wikipedia">
-
-
-        </div>
-
-        <div class="tile is-3 is-parent">
+        <div class="tile is-4 is-parent">
             <article class="tile is-child box">
                 <div class="content">
-                    <p class="title" id="artist-name">Artist Name</p>
+                    <p class="title" id="artist-name">STAGE NAME</p>
                     <p class="subtitle">Real Name</p>
                     <div class="content">
-                        <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat
-                            pulvinar,
-                            at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus
-                            ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio
-                            felis ut quam.</p>
-                        <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
-                            Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et
-                            sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus
-                            felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget
-                            varius ligula, at volutpat tortor.</p>
-                        <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus
-                            dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
-                            ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
-                            semper leo.</p>
+                        <p></p>
                     </div>
                 </div>
             </article>
         </div>
 
-        <div class="tile is-parent is-3">
+        <div class="tile is-parent is-4">
             <article class="tile is-child box">
-                <p class="title">Top 5 Songs</p>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar,
-                        at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus
-                        ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio
-                        felis ut quam.</p>
-                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
-                        Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et
-                        sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus
-                        felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget
-                        varius ligula, at volutpat tortor.</p>
-                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus
-                        dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
-                        ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
-                        semper leo.</p>
+                <p class="title">Youtube Video</p>
+                <div class="content" id="youtubeContainer">
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <!-- <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe>
+                    <iframe src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="youtubeVideo" id="video1"></iframe> -->
                 </div>
             </article>
         </div>
 
-        <div class="tile is-parent is-3">
-            <article class="tile is-child box">
-                <p class="title">History / Selected Song</p>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar,
-                        at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus
-                        ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio
-                        felis ut quam.</p>
-                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
-                        Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et
-                        sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus
-                        felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget
-                        varius ligula, at volutpat tortor.</p>
-                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus
-                        dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
-                        ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
-                        semper leo.</p>
-                </div>
-            </article>
-        </div>
+
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.1.0/marked.min.js"
-        integrity="sha512-DZIC9m2IbFlio5GE2oKD6/veW6NXML5Cbo9FHnba7Q9R4OCPelWw9R5QpupcPPLSv0euhuRr+5JV5pWl3X3nSg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./assets/js/script.js"></script>
+
+    <footer class="footer">
+        <div class="content has-text-centered enable-line-break">
+            <p class="footer-text">
+                <span style="color: #FF7700; font-weight: 500;">MUSIC BRAIN</span>
+                built by
+                <a href="https://github.com/Tim-KS">Tim-KS</a>
+                <a href="https://github.com/jonnwijaya">Jonnwijaya</a>
+                <a href="https://github.com/DancingSandwich">DancingSandwich</a>
+                <a href="https://github.com/RosemaryJF">RosemaryJF&nbsp;</a>
+                &copy; 2022
+            </p>
+
+        </div>
+    </footer>
+
+    <div id="modal-js-error" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-card">
+            <div class="box" style="background-color: #FFB97C;">
+                <p>OH NO!</p>
+                <p>The MUSIC BRAIN blew a fuse looking for your artist!</p>
+                <p>Bear with us while we reset the fusebox, maybe try someone else?</p>
+            </div>
+        </div>
+
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <script src="./assets/js/getMusic.js"></script>
 </body>
 
 </html>
