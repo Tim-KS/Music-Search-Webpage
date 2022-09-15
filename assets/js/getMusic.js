@@ -46,26 +46,25 @@ function getArtist(searchResult) {
                         console.log(embedLink);
                         document.getElementById("video0").src = embedLink;
 
-
                         // for (var i = 0; i < data.items.length; i++) {
                         //     //video loop goes here
-                        //     embedLink = embedLink + data.items[i].id.videoId[0];
+                        //     embedLink = embedLink + data.items[i].id.videoId;
                         //     console.log(embedLink);
                         //     document.getElementById("video0").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
-                        //     embedLink = embedLink + data.items[i].id.videoId[1];
+                        //     embedLink = embedLink + data.items[i].id.videoId;
                         //     console.log(embedLink);
                         //     document.getElementById("video1").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
-                        //     embedLink = embedLink + data.items[i].id.videoId[2];
+                        //     embedLink = embedLink + data.items[i].id.videoId;
                         //     console.log(embedLink);
                         //     document.getElementById("video2").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
-                        //     embedLink = embedLink + data.items[i].id.videoId[3];
+                        //     embedLink = embedLink + data.items[i].id.videoId;
                         //     console.log(embedLink);
                         //     document.getElementById("video3").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
-                        //     embedLink = embedLink + data.items[i].id.videoId[4];
+                        //     embedLink = embedLink + data.items[i].id.videoId;
                         //     console.log(embedLink);
                         //     document.getElementById("video4").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
