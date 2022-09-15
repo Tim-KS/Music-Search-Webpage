@@ -511,7 +511,7 @@ fieldset {
 pre {
     -webkit-overflow-scrolling: touch;
     background-color: whitesmoke;
-    color: #4a4a4a;
+    color: #EAEAEA;
     font-size: 0.875em;
     overflow-x: auto;
     padding: 1.25rem 1.5rem;
@@ -537,7 +537,7 @@ table th:not([align]) {
 }
 
 table th {
-    color: #363636;
+    color: #EAEAEA;
 }
 
 @-webkit-keyframes spinAround {
@@ -2288,7 +2288,7 @@ fieldset[disabled] .button {
 .content h4,
 .content h5,
 .content h6 {
-    color: #363636;
+    color: #EAEAEA;
     font-weight: 600;
     line-height: 1.125;
 }
@@ -2434,7 +2434,7 @@ fieldset[disabled] .button {
 }
 
 .content table th {
-    color: #363636;
+    color: #EAEAEA;
 }
 
 .content table th:not([align]) {
@@ -2444,13 +2444,13 @@ fieldset[disabled] .button {
 .content table thead td,
 .content table thead th {
     border-width: 0 0 2px;
-    color: #363636;
+    color: #EAEAEA;
 }
 
 .content table tfoot td,
 .content table tfoot th {
     border-width: 2px 0 0;
-    color: #363636;
+    color: #EAEAEA;
 }
 
 .content table tbody tr:last-child td,

@@ -8,7 +8,7 @@ var formSubmitHandler = function (event) {
         searchItem = searchItem.split(' ').join('_')
         tryWiki(searchItem);
     } else {
-        alert('nice try buddy');
+        errorModal();
     }
 }
 
@@ -45,3 +45,22 @@ var tryWiki = function (artist) {
 
 
 userFormEl.addEventListener('submit', formSubmitHandler);
+
+// Function to run the errorModal
+function errorModal() {
+    // Add is-active class on the modal
+    document.getElementById("modal-js-error").classList.add("is-active");
+}
+       // Add event listeners to close the modal
+       // whenever user click outside modal
+    document.querySelectorAll(
+    ".modal-background, .modal-close," + 
+    ".modal-card-head .delete, .modal-card-foot .button"
+    )
+    .forEach(($el) => {
+        const $modal = $el.closest(".modal");
+        $el.addEventListener("click", () => {
+        // Remove the is-active class from the modal
+        $modal.classList.remove("is-active");
+        });
+    });
