@@ -42,29 +42,32 @@ function getArtist(searchResult) {
                     })
                     .then(function (data) {
                         console.log('YouTube Channel Top 5 Videos: \n----------');
-                        embedLink = embedLink + data.items[0].id.videoId;
-                        console.log(embedLink);
-                        document.getElementById("video0").src = embedLink;
+                        console.log(data)
+                        // embedLink = 'https://www.youtube.com/embed/' + data.items[0].id.videoId;
+                        // console.log(embedLink);
+                        document.getElementById("video0").src = 'https://www.youtube.com/embed/' + data.items[0].id.videoId;
+                        // embedLink = 'https://www.youtube.com/embed/';
+
 
                         // for (var i = 0; i < data.items.length; i++) {
                         //     //video loop goes here
-                        //     embedLink = embedLink + data.items[i].id.videoId;
+                        //     embedLink = embedLink + data.items[i].id.videoId[0];
                         //     console.log(embedLink);
                         //     document.getElementById("video0").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
-                        //     embedLink = embedLink + data.items[i].id.videoId;
+                        //     embedLink = embedLink + data.items[i].id.videoId[1];
                         //     console.log(embedLink);
                         //     document.getElementById("video1").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
-                        //     embedLink = embedLink + data.items[i].id.videoId;
+                        //     embedLink = embedLink + data.items[i].id.videoId[2];
                         //     console.log(embedLink);
                         //     document.getElementById("video2").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
-                        //     embedLink = embedLink + data.items[i].id.videoId;
+                        //     embedLink = embedLink + data.items[i].id.videoId[3];
                         //     console.log(embedLink);
                         //     document.getElementById("video3").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
-                        //     embedLink = embedLink + data.items[i].id.videoId;
+                        //     embedLink = embedLink + data.items[i].id.videoId[4];
                         //     console.log(embedLink);
                         //     document.getElementById("video4").src = embedLink;
                         //     embedLink = 'https://www.youtube.com/embed/';
