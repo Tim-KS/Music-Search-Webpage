@@ -20,15 +20,14 @@ The app title can be found on the left hand side of the screen, with the input b
 
  ![Image shows the landing page of Music Brain. The Music Brain icon sits to the RHS of the screen while the app title and search area sit to the left. Two tiles in a lighter shade of purple to the background sit empty with the headings of "Artist Information" and "Youtube videos".](./assets/images/landing-page.jpg)
 
-Once the "Search Artist" button has been clicked the content will retrieved from Wikipedia and Yotube and loading their resepctive tiles. See an image below for an example of what that looks like:
-
-![Insert Image](Insert image)
+Once the "Search Artist" button has been clicked the content will retrieved from Wikipedia and Yotube and loading their resepctive tiles. 
 
 If an error occurs, such as invalid user input, a full screen modal will pop up telling the user there as been an error occur. They have to click on the white 'X' in the top RH corner to close it. Please see the image below for what it would look like:
 
  ![Image shows an example of the modal which is light orange in colour. The text says: OH NO! The MUSIC BRAIN blew a fuse looking for your artist! Bear with us while we reset the fusebox, maybe try someone else?](./assets/images/modal-example.jpg)
 
-[input of deployed URL]
+You can check out the MVP of Music Brain via the link below. Get excited about the future of it too!
+https://tim-ks.github.io/Music-Search-Webpage/
 
 ## Credits
 
