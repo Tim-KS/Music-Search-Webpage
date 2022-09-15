@@ -87,20 +87,29 @@ footer {
 
 #youtubeContainer {
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     width: 100%;
-    padding-top: 56.25%;
     /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-.youtubeVideo {
-    position: absolute;
+#video0,
+#video1,
+#video2,
+#video3,
+#video4 {
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
+    width: 100%;
+    height: 250px;
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*
     width: 100%;
     height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    */
 }
 
 @media screen and (max-width: 768px) {
@@ -118,7 +127,7 @@ footer {
         margin: 0 25% 2% 25%;
     }
 
-    .has-text-centered  {
+    .has-text-centered {
         margin: 0 25% 2% 25%;
         width: 23rem;
     }
@@ -128,7 +137,7 @@ footer {
 
 @media screen and (max-width: 567px) {
 
-    .app-title  {
+    .app-title {
         text-align: center;
         margin-bottom: -3%;
     }
