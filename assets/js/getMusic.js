@@ -22,7 +22,7 @@ function getArtist(searchResult) {
         }
     })
     .then(function(data) {
-        if (data.length === 0) {
+        if (data.items === 0) {
             errorModal()
         } else {
         var channelId = data.items[0].id.channelId;

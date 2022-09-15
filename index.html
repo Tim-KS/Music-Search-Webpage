@@ -15,7 +15,7 @@
 <body>
     <header class="hero is-medium">
         <div class="hero-body">
-            <h1 class="app-title" style="color: #ffffff">
+            <h1 class="app-title" style="color: #EAEAEA">
                 MUSIC BRAIN
             </h1>
             </br>
@@ -27,7 +27,7 @@
             </br>
             <form id="user-form" class="card-body">
                 <input name="user-form" class="input is-rounded" id="artistSearch" type="text"
-                    placeholder="Justin Bieber">
+                    placeholder="Try: Justin Bieber">
                 </br>
 
                 <div class="has-text-centered">
@@ -39,16 +39,8 @@
 
     </header>
 
-    <div class="tile is-ancestor">
-        <div class="tile is-4 is-parent">
-            <article class="tile is-child box">
-                <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-            </article>
-        </div>
-
-        <div class="tile is-4 is-parent">
+    <div class="tile is-ancestor" id="ancestor-tile">
+        <div class="tile is-6 is-parent">
             <article class="tile is-child box">
                 <div class="content">
                     <p class="title" id="artist-name">STAGE NAME</p>
@@ -60,9 +52,9 @@
             </article>
         </div>
 
-        <div class="tile is-parent is-4">
+        <div class="tile is-parent is-6">
             <article class="tile is-child box">
-                <p class="title">Youtube Video</p>
+                <p class="title youtube">Youtube Videos</p>
                 <div class="content" id="youtubeContainer">
                     <iframe src="" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -116,7 +108,12 @@
         </div>
 
         <button class="modal-close is-large" aria-label="close"></button>
+
+      </div>
+
     </div>
+        
+    <script src="./assets/js/getMusic.js"></script>
     <script src="./assets/js/script.js"></script>
     <!-- <script src="./assets/js/getMusic.js"></script> -->
 </body>

@@ -4,7 +4,7 @@
     --secondarybackgroundcolour: #2A2550;
     --bordercolour: #FF7700;
     --buttoncolour: #FFB97C;
-    --textcolour: #fff;
+    --textcolour: #EAEAEA;
 }
 
 body {
@@ -13,17 +13,16 @@ body {
     background-color: var(--mainbackgroundcolour);
     color: var(--textcolour);
     border-color: var(--bordercolour);
+    overflow-x: hidden;
 }
 
 header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 5%;
+    /* margin-left: 5%; */
 
 }
-
-
 
 .app-title {
     font-size: 5rem;
@@ -32,7 +31,7 @@ header {
 
 #icon-img {
     float: right;
-    margin-top: -9.5%;
+    margin-top: -7%;
 }
 
 .input {
@@ -40,19 +39,10 @@ header {
     margin-bottom: 1.5rem;
 }
 
-.has-text-centered {
-    display: flex;
-}
+
 
 .button {
     width: 22rem;
-}
-
-.tile .is-ancestor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20rem;
 }
 
 .is-child {
@@ -64,6 +54,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.has-text-centered {
+    display: flex;
 }
 
 .enable-line-break {
@@ -103,7 +97,42 @@ footer {
     height: 100%;
 }
 
+@media screen and (max-width: 998px) {
+    body {
+        width: 100%;
+    }
+
+    .app-title {
+        text-align: center;
+        margin-bottom: -3%;
+    }
+
+    #icon-img {
+        margin: 0 25% 0 35%; 
+        float: none; 
+    }
+
+    #user-form {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input,
+    .button {
+        margin: 0 25% 2% 30%;
+    }
+
+    #ancestor-tile {
+        width: 100%;
+        margin: 0
+    }
+}
+
 @media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+    
     .app-title {
         text-align: center;
         margin-bottom: -3%;
@@ -111,23 +140,26 @@ footer {
 
     #icon-img {
         float: none;
-        margin: 0 25% 0 31%;
+        margin: 0 25% 0 33%;
+    }
+
+    .input,
+    .button {
+        margin: 0 25% 2% 30%;
     }
 
     .input {
-        margin: 0 25% 2% 25%;
+        width: 323px;
     }
 
-    .has-text-centered  {
-        margin: 0 25% 2% 25%;
-        width: 23rem;
+    #ancestor-tile {
+        width: 100%;
+        margin: 0;
     }
-
 }
 
 
 @media screen and (max-width: 567px) {
-
     .app-title  {
         text-align: center;
         margin-bottom: -3%;
@@ -135,17 +167,24 @@ footer {
 
     #icon-img {
         float: none;
-        margin: 0 25% 0 31%;
+        margin: 0 25% 0 26%;
     }
 
-    /* .input {
-        margin: 0 25% 2% 25%;
+    .input,
+    .button {
+        margin: 0 25% 2% 30%;
     }
 
-    .has-text-centered{
-        margin: 0 25% 2% 25%;
-        width: 23rem;
-    } */
+    .input {
+        width: 238px;
+    }
 
+    #ancestor-tile {
+        width: 100%;
+        margin: 0;
+    }
 
+    .footer-text {
+        margin-right: 2.5rem
+    }
 }
