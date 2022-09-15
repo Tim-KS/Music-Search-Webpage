@@ -10,7 +10,7 @@ Music brain is a centralised area where our user can search up their artist of c
 2. Go into the folder and open 'index.html'
 3. The program will be ready to use
 
-Otherwise follow the deployed link to test the application.
+Otherwise follow the deployed link to test the application. - https://tim-ks.github.io/Music-Search-Webpage/
 
 ## Usage
 
