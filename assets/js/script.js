@@ -25,13 +25,19 @@ var tryWiki = function (artist) {
     try {
         fetch(url)
             .then(function (response) {
-                if (response.ok) {
+                if (!response.ok) {
+                    errorModal()
+                } else if (response.ok) {
                     response.json().then(function (data) {
                         var json = data
+                        console.log(data)
+                        if (data.error) {
+                            errorModal()
+                        } else {
                         var content = json.parse.text["*"]
                         var element = document.querySelector(".content");
                         element.innerHTML = content
-
+                        }
                     })
                 }
             }
