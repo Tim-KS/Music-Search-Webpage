@@ -34,9 +34,9 @@ var tryWiki = function (artist) {
                         if (data.error) {
                             errorModal()
                         } else {
-                        var content = json.parse.text["*"]
-                        var element = document.querySelector(".content");
-                        element.innerHTML = content
+                            var content = json.parse.text["*"]
+                            var element = document.querySelector(".wikiContent");
+                            element.innerHTML = content
                         }
                     })
                 }
@@ -57,16 +57,16 @@ function errorModal() {
     // Add is-active class on the modal
     document.getElementById("modal-js-error").classList.add("is-active");
 }
-       // Add event listeners to close the modal
-       // whenever user click outside modal
-    document.querySelectorAll(
-    ".modal-background, .modal-close," + 
+// Add event listeners to close the modal
+// whenever user click outside modal
+document.querySelectorAll(
+    ".modal-background, .modal-close," +
     ".modal-card-head .delete, .modal-card-foot .button"
-    )
+)
     .forEach(($el) => {
         const $modal = $el.closest(".modal");
         $el.addEventListener("click", () => {
-        // Remove the is-active class from the modal
-        $modal.classList.remove("is-active");
+            // Remove the is-active class from the modal
+            $modal.classList.remove("is-active");
         });
     });
