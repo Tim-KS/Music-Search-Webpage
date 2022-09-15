@@ -52,7 +52,8 @@ var tryWiki = function (artist) {
 
 }
 
-userFormEl.addEventListener('submit', formSubmitHandler);
+// userFormEl.addEventListener('submit', formSubmitHandler);
+document.getElementById('submitBtn').addEventListener('click', formSubmitHandler);
 
 // Function to run the errorModal
 function errorModal() {
