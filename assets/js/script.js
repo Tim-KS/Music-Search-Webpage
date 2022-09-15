@@ -4,7 +4,6 @@ var nameInputEl = document.querySelector('#artistSearch');
 var formSubmitHandler = function (event) {
     event.preventDefault();
     var searchItem = nameInputEl.value.trim();
-    console.log(searchItem)
     if (searchItem) {
         searchItem = searchItem.split(' ').join('_')
         tryWiki(searchItem);
@@ -29,7 +28,6 @@ var tryWiki = function (artist) {
                 if (response.ok) {
                     response.json().then(function (data) {
                         var json = data
-                        console.log(json);
                         var content = json.parse.text["*"]
                         var element = document.querySelector(".content");
                         element.innerHTML = content
