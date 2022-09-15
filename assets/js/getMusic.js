@@ -36,19 +36,19 @@ function getArtist(searchResult) {
                             //video loop goes here
                             embedLink = embedLink + data.items[i].id.videoId[0];
                             console.log(embedLink);
-                            document.getElementById("video0").src = embedLink
+                            document.getElementById("video0").src = embedLink;
                             embedLink = 'https://www.youtube.com/embed/';
                             embedLink = embedLink + data.items[i].id.videoId[1];
                             console.log(embedLink);
-                            document.getElementById("video1").src = embedLink
+                            document.getElementById("video1").src = embedLink;
                             embedLink = 'https://www.youtube.com/embed/';
                             embedLink = embedLink + data.items[i].id.videoId[2];
                             console.log(embedLink);
-                            document.getElementById("video2").src = embedLink
+                            document.getElementById("video2").src = embedLink;
                             embedLink = 'https://www.youtube.com/embed/';
                             embedLink = embedLink + data.items[i].id.videoId[3];
                             console.log(embedLink);
-                            document.getElementById("video3").src = embedLink
+                            document.getElementById("video3").src = embedLink;
                             embedLink = 'https://www.youtube.com/embed/';
                             embedLink = embedLink + data.items[i].id.videoId[4];
                             console.log(embedLink);
