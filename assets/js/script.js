@@ -1,6 +1,8 @@
+// Variables to pull elements from index
 var userFormEl = document.querySelector('#user-form');
 var nameInputEl = document.querySelector('#artistSearch');
 
+// Function to handle the submit event
 var formSubmitHandler = function (event) {
     event.preventDefault();
     var searchItem = nameInputEl.value.trim();
@@ -12,6 +14,7 @@ var formSubmitHandler = function (event) {
     }
 }
 
+// Function to retrieve the Wikipedia page for the artist search
 var tryWiki = function (artist) {
 
     var url = "https://en.wikipedia.org/w/api.php?" +
@@ -48,7 +51,6 @@ var tryWiki = function (artist) {
     }
 
 }
-
 
 userFormEl.addEventListener('submit', formSubmitHandler);
 
