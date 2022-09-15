@@ -31,7 +31,7 @@ header {
 
 #icon-img {
     float: right;
-    margin-top: -9.5%;
+    margin-top: -7%;
 }
 
 .input {
@@ -39,9 +39,7 @@ header {
     margin-bottom: 1.5rem;
 }
 
-.has-text-centered {
-    display: flex;
-}
+
 
 .button {
     width: 22rem;
@@ -56,6 +54,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.has-text-centered {
+    display: flex;
 }
 
 .enable-line-break {
@@ -156,19 +158,16 @@ footer {
     }
 }
 
-@media screen and (max-width: 646px) {
-    body {
-        width: 100%;
-    }
-    
-    .app-title {
+
+@media screen and (max-width: 567px) {
+    .app-title  {
         text-align: center;
         margin-bottom: -3%;
     }
 
     #icon-img {
         float: none;
-        margin: 0 25% 0 33%;
+        margin: 0 25% 0 26%;
     }
 
     .input,
@@ -177,37 +176,15 @@ footer {
     }
 
     .input {
-        width: 323px;
+        width: 238px;
     }
 
     #ancestor-tile {
         width: 100%;
         margin: 0;
     }
-}
 
-
-@media screen and (max-width: 567px) {
-    /* body {
-        width: 100%;
-    } */
-
-    .app-title  {
-        text-align: center;
-        margin-bottom: -3%;
-    }
-
-    #icon-img {
-        float: none;
-        margin: 0 25% 0 31%;
-    }
-
-    .input {
-        margin: 0 25% 2% 25%;
-    }
-
-    #ancestor-tile {
-        width: 100%;
-        margin: 0;
+    .footer-text {
+        margin-right: 2.5rem
     }
 }
