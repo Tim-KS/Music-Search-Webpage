@@ -10,15 +10,25 @@ Music brain is a centralised area where our user can search up their artist of c
 2. Go into the folder and open 'index.html'
 3. The program will be ready to use
 
+Otherwise follow the deployed link to test the application.
+
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Depending on where you are launching the application from (code editor or deployed link) you will land on the homepage.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+The app title can be found on the left hand side of the screen, with the input box directly below it. Enter the artist to be searched and click the orange "Search Artist" button found directly. Please refer to the screen shot below for an example of what it will look like:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+ ![Image shows the landing page of Music Brain. The Music Brain icon sits to the RHS of the screen while the app title and search area sit to the left. Two tiles in a lighter shade of purple to the background sit empty with the headings of "Artist Information" and "Youtube videos".](./assets/images/landing-page.jpg)
+
+Once the "Search Artist" button has been clicked the content will retrieved from Wikipedia and Yotube and loading their resepctive tiles. See an image below for an example of what that looks like:
+
+![Insert Image](Insert image)
+
+If an error occurs, such as invalid user input, a full screen modal will pop up telling the user there as been an error occur. They have to click on the white 'X' in the top RH corner to close it. Please see the image below for what it would look like:
+
+ ![Image shows an example of the modal which is light orange in colour. The text says: OH NO! The MUSIC BRAIN blew a fuse looking for your artist! Bear with us while we reset the fusebox, maybe try someone else?](./assets/images/modal-example.jpg)
+
+[input of deployed URL]
 
 ## Credits
 
@@ -33,21 +43,13 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 - Wikipedia
 - Bulma
 
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
 ## Features
-- Instantly search for a summary of any music artist
+- Instantly search for a music artist
 - Biography of artist
-- Their Top 5 songs
+- Their Top 5 media videos
 - Built in YouTube player
 
 ## Planned features
 - Lyrics to play along with song
 - Improved efficiency of engine (be able to even search for highly niche artists)
 - Save your favourite artists
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.

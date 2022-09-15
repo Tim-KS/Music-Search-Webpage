@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bulma stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Music Brain stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>Music Brain</title>
 </head>
 
 <body>
+    <!-- Header element containing app title and user search function -->
     <header class="hero is-medium">
         <div class="hero-body">
             <h1 class="app-title" style="color: #EAEAEA">
@@ -20,11 +23,14 @@
             </h1>
             </br>
 
+            <!-- Music Brain icon -->
             <image id="icon-img" src="./assets/images/brain.png"
                 alt="cartoon icon of a brain. The left side is solid orange with purple notes. The right side is transperant with geomtric lines joined by neurons.">
             </image>
 
             </br>
+
+            <!-- User form, input and button for artist search -->
             <form id="user-form" class="card-body">
                 <input name="user-form" class="input is-rounded" id="artistSearch" type="text"
                     placeholder="Try: Justin Bieber">
@@ -32,30 +38,34 @@
 
                 <div class="has-text-centered">
                     <button type="click" class="button is-success is-rounded js-modal-trigger" id="submitBtn"
-                        data-target="modal-js-error" style="background-color: #FFB97C">Search</button>
+                        data-target="modal-js-error" style="background-color: #FFB97C">Search Artist</button>
                 </div>
             </form>
         </div>
 
     </header>
 
+    <!-- Ancestor tile to hold 2 smaller tiles -->
     <div class="tile is-ancestor" id="ancestor-tile">
+
+        <!-- Div containing the first tile which will hold the wikipedia result -->
         <div class="tile is-6 is-parent">
             <article class="tile is-child box">
                 <div class="content">
-                    <p class="title" id="artist-name">STAGE NAME</p>
-                    <p class="subtitle">Real Name</p>
+                    <p class="title" id="artist-name">Artist Information</p>
                     <div class="content">
-                        <p></p>
+                        <p class="wikiContent" style="color: #EAEAEA;"></p>
                     </div>
                 </div>
             </article>
         </div>
 
+        <!-- Div containing the second tile which will hold the youtube videos -->
         <div class="tile is-parent is-6">
             <article class="tile is-child box">
                 <p class="title youtube">Youtube Videos</p>
                 <div class="content" id="youtubeContainer">
+                    <!-- iframes to allow for video preview -->
                     <iframe src="" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen class="youtubeVideo" id="video0"></iframe>
@@ -74,10 +84,9 @@
                 </div>
             </article>
         </div>
-
-
     </div>
 
+    <!-- Footer element containing links to contributors personal GitHub profiles -->
     <footer class="footer">
         <div class="content has-text-centered enable-line-break">
             <p class="footer-text">
@@ -89,10 +98,11 @@
                 <a href="https://github.com/RosemaryJF">RosemaryJF&nbsp;</a>
                 &copy; 2022
             </p>
-
         </div>
+    
     </footer>
 
+    <!-- Div holding the modal that will pop-up if there is an error -->
     <div id="modal-js-error" class="modal">
         <div class="modal-background"></div>
 
@@ -110,9 +120,10 @@
 
     </div>
 
-    <script src="./assets/js/getMusic.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <!-- Javascipt souring for application functionality -->
     <!-- <script src="./assets/js/getMusic.js"></script> -->
+    <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>

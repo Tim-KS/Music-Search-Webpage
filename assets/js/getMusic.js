@@ -1,18 +1,28 @@
+// Global variables to retrieve elements in index
 var artistSearch = document.getElementById('artistSearch');
 var submitBtn = document.getElementById('submitBtn');
+
+// Variables to hold requests
 var searchResult = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=&type=channel&key=AIzaSyDofZ01q_Qh-baUnjYC0t5fzULoMJw_qNE';
 var searchList = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=&type=channel&key=AIzaSyDofZ01q_Qh-baUnjYC0t5fzULoMJw_qNE';
+
+// Variable to hold the embed link to load youtube videos
 var embedLink = 'https://www.youtube.com/embed/'
 
+// Function for click event and calling getArtist function.
 submitBtn.addEventListener('click', function (event) {
     event.preventDefault();
     var artist = artistSearch.value;
     artist = artist.replace(/\s+/g, '');
     searchResult = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=' + artist + '&type=channel&key=AIzaSyDofZ01q_Qh-baUnjYC0t5fzULoMJw_qNE';
     getArtist(searchResult);
+
+    // Setting the searched artist to local storage
     localStorage.setItem('You have searched: ', artist);
 })
 
+
+// Function to retrieve 5 media videos related to the searched artist
 function getArtist(searchResult) {
     fetch(searchResult).then(function (response) {
         if (!response.ok) {
@@ -62,12 +72,13 @@ function getArtist(searchResult) {
         })
 }
 
+// Function to run the error modal
 function errorModal() {
     // Add is-active class on the modal
     document.getElementById("modal-js-error").classList.add("is-active");
 }
 // Add event listeners to close the modal
-// whenever user click outside modal
+// Including whenever user click outside modal
 document.querySelectorAll(
     ".modal-background, .modal-close," +
     ".modal-card-head .delete, .modal-card-foot .button"
