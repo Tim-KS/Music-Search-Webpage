@@ -36,37 +36,42 @@ function getArtist(searchResult) {
                 errorModal()
             } else {
                 var channelId = data.items[0].id.channelId;
-                fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyDofZ01q_Qh-baUnjYC0t5fzULoMJw_qNE&channelId=' + channelId + '&part=snippet,id&type=video&chart=mostPopular&categoryId=10&maxResults=5')
+                fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyDofZ01q_Qh-baUnjYC0t5fzULoMJw_qNE&channelId=' + channelId + '&part=snippet,id&type=video&chart=mostPopular&categoryId=10&maxResults=1')
                     .then(function (response) {
                         return response.json()
                     })
                     .then(function (data) {
                         console.log('YouTube Channel Top 5 Videos: \n----------');
-                        for (var i = 0; i < data.items.length; i++) {
-                            //video loop goes here
-                            embedLink = embedLink + data.items[i].id.videoId[0];
-                            console.log(embedLink);
-                            document.getElementById("video0").src = embedLink;
-                            embedLink = 'https://www.youtube.com/embed/';
-                            embedLink = embedLink + data.items[i].id.videoId[1];
-                            console.log(embedLink);
-                            document.getElementById("video1").src = embedLink;
-                            embedLink = 'https://www.youtube.com/embed/';
-                            embedLink = embedLink + data.items[i].id.videoId[2];
-                            console.log(embedLink);
-                            document.getElementById("video2").src = embedLink;
-                            embedLink = 'https://www.youtube.com/embed/';
-                            embedLink = embedLink + data.items[i].id.videoId[3];
-                            console.log(embedLink);
-                            document.getElementById("video3").src = embedLink;
-                            embedLink = 'https://www.youtube.com/embed/';
-                            embedLink = embedLink + data.items[i].id.videoId[4];
-                            console.log(embedLink);
-                            document.getElementById("video4").src = embedLink;
-                            embedLink = 'https://www.youtube.com/embed/';
-                            console.log('This is the index ' + i + ' most popular video: ' + data.items[i].id.videoId);
-                            embedLink = 'https://www.youtube.com/embed/';
-                        }
+                        embedLink = embedLink + data.items[0].id.videoId;
+                        console.log(embedLink);
+                        document.getElementById("video0").src = embedLink;
+
+
+                        // for (var i = 0; i < data.items.length; i++) {
+                        //     //video loop goes here
+                        //     embedLink = embedLink + data.items[i].id.videoId[0];
+                        //     console.log(embedLink);
+                        //     document.getElementById("video0").src = embedLink;
+                        //     embedLink = 'https://www.youtube.com/embed/';
+                        //     embedLink = embedLink + data.items[i].id.videoId[1];
+                        //     console.log(embedLink);
+                        //     document.getElementById("video1").src = embedLink;
+                        //     embedLink = 'https://www.youtube.com/embed/';
+                        //     embedLink = embedLink + data.items[i].id.videoId[2];
+                        //     console.log(embedLink);
+                        //     document.getElementById("video2").src = embedLink;
+                        //     embedLink = 'https://www.youtube.com/embed/';
+                        //     embedLink = embedLink + data.items[i].id.videoId[3];
+                        //     console.log(embedLink);
+                        //     document.getElementById("video3").src = embedLink;
+                        //     embedLink = 'https://www.youtube.com/embed/';
+                        //     embedLink = embedLink + data.items[i].id.videoId[4];
+                        //     console.log(embedLink);
+                        //     document.getElementById("video4").src = embedLink;
+                        //     embedLink = 'https://www.youtube.com/embed/';
+                        //     console.log('This is the index ' + i + ' most popular video: ' + data.items[i].id.videoId);
+                        //     embedLink = 'https://www.youtube.com/embed/';
+                        // }
                     })
             }
         })
