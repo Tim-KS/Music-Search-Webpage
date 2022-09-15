@@ -10,6 +10,8 @@ Music brain is a centralised area where our user can search up their artist of c
 2. Go into the folder and open 'index.html'
 3. The program will be ready to use
 
+Otherwise follow the deployed link to test the application.
+
 ## Usage
 
 Provide instructions and examples for use. Include screenshots as needed.
@@ -33,14 +35,10 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 - Wikipedia
 - Bulma
 
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
 ## Features
-- Instantly search for a summary of any music artist
+- Instantly search for a music artist
 - Biography of artist
-- Their Top 5 songs
+- Their Top 5 media videos
 - Built in YouTube player
 
 ## Planned features
