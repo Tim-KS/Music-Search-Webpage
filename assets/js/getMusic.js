@@ -42,9 +42,11 @@ function getArtist(searchResult) {
                     })
                     .then(function (data) {
                         console.log('YouTube Channel Top 5 Videos: \n----------');
-                        embedLink = embedLink + data.items[0].id.videoId;
-                        console.log(embedLink);
-                        document.getElementById("video0").src = embedLink;
+                        console.log(data)
+                        // embedLink = 'https://www.youtube.com/embed/' + data.items[0].id.videoId;
+                        // console.log(embedLink);
+                        document.getElementById("video0").src = 'https://www.youtube.com/embed/' + data.items[0].id.videoId;
+                        // embedLink = 'https://www.youtube.com/embed/';
 
 
                         // for (var i = 0; i < data.items.length; i++) {
